@@ -1,0 +1,32 @@
+{
+  "generator-ngx-rocket": {
+    "version": "7.0.2",
+    "props": {
+      "location": "path",
+      "strict": false,
+      "skipInstall": false,
+      "skipQuickstart": false,
+      "initGit": true,
+      "target": [
+        "web"
+      ],
+      "pwa": false,
+      "ui": "bootstrap",
+      "auth": true,
+      "lazy": true,
+      "angulartics": false,
+      "tools": [
+        "prettier",
+        "hads"
+      ],
+      "utility": [
+        "lodash"
+      ],
+      "appName": "unbxd",
+      "projectName": "unbxd",
+      "packageManager": "npm",
+      "mobile": [],
+      "desktop": []
+    }
+  }
+}

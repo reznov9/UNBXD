@@ -1,0 +1,13 @@
+<div class="col" *ngFor="let facet of facets | keyvalue">
+    <div class="padding-left" *ngFor="let props of facet.value | keyvalue">
+        <div class="padding-top-10" *ngIf="checkFacetObject(props.key, props.value)"></div>
+        <div class="separator" *ngIf="checkForValues(props.key) && props.value.length">
+            <b>{{filterName}}</b>
+            <span class="block" *ngFor="let option of props.value">
+                <span class="padding-10" *ngIf="typeCheck(option)">
+                    <input type="checkbox" value="{{option}}" (change)="onSelect($event)"> <span class="tablet-text-wrap"> {{option}}</span>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>

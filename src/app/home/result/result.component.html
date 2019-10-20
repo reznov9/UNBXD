@@ -1,0 +1,20 @@
+<div class="container-fluid">
+        <div class="jumbotron text-center header-image" [ngStyle]="{'background-image': imageUrl}">
+            <h1>
+                <img class="logo imgRatio" src="https://unbxd.com/wp-content/themes/unbxd/img/unbxd_logo_white.png" alt="angular logo" />
+            </h1>
+            <app-loader [isLoading]="isLoading"></app-loader>
+        </div>
+      
+        <div class="row" *ngIf="loadedProducts">
+          <aside class="col-sm-2 col-sm-pull-10 col-md-3 col-md-pull-9">
+              <facets [facets]="loadedProducts.facets" (selectedFacets)="selectedFacets($event)"></facets>
+          </aside>
+            <section class="col-sm-10 col-sm-push-2 col-md-9 col-sm-push-3">
+              <product-card [loadedProducts]="loadedProducts" (selectedProduct)="selectedProduct($event)"></product-card>
+            </section>
+        </div>
+        <div *ngIf="error">
+          No Products to Display. Try again later.
+        </div>
+      
